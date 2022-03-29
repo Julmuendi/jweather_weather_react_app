@@ -1,5 +1,6 @@
-.WeatherForecast{
+.WeatherSearch{
     padding: 30px 45px;
     margin-top: 15px;
     background-color: #B6E1E0;
+    border-radius: 10px;
 }
