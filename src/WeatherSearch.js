@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./WeatherSearch.css"
 import axios from 'axios'
 import { RotatingSquare } from "react-loader-spinner";
+import FormattedDate from "./FormattedDate";
 
 
 export default function WeatherSearch(){
@@ -15,6 +16,7 @@ function displayWeather(response){
     setWeather(
         {
             ready:true,
+            date:new Date(response.data.dt*1000),
             temperature:response.data.main.temp,
             description: response.data.weather[0].description,
             name: response.data.name,
@@ -51,17 +53,19 @@ if(ready){
         <div className="weather">
             <form onSubmit={handleSubmit}>
                 <div className="row">
-                    <div className="col-sm-9">
+                    <div className="col-9">
                         <input type="search" placeholder="Enter a city.." className="form-control" autoFocus="on" onChange={updateCity} />
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-3">
                         <input type="submit" value="Search" className="btn btn-primary" />
                     </div>
                 </div>
             </form>
             <h1>{weather.name}</h1>
             <ul>
-                <li>Monday 07:00</li>
+                <li>
+                    <FormattedDate date={weather.date} />
+                </li>
                 <li className="text-capitalize">{weather.description}</li>
             </ul>
             <div className="row mt-3">
