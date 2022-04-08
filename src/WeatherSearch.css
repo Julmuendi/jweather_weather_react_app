@@ -38,7 +38,21 @@ margin: 20px 0 0 0;
     display: inline-block;
     width: 64px;
     margin-bottom: 45px;
-
+    animation-name: weather-icon;
+    animation-delay: 200ms;
+    z-index: 20;
+}
+@keyframes weather-icon{
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.spinning{
+    animation: spin 5s infinite;
+   
 }
 .weather .unit{
     color: #fff;
@@ -52,12 +66,12 @@ margin: 20px 0 0 0;
 @media(max-width:760px){
     .weather .temperature{
         font-weight: bold;
-        color: rgb(33, 33,33);
+        color: #fff;
         font-size: 42px;
         font-weight: 400;
     } 
     .weather .unit{
-        color: rgb(33, 33, 33);
+        color: #fff;
         font-size: 16px;
         font-weight: 400;
         position: relative;

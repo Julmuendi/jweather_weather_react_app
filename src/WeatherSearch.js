@@ -67,7 +67,7 @@ if(ready){
     )
 }else{
 
-    Search("Paris")
+    Search("Amsterdam")
 return <RotatingSquare
 ariaLabel="rotating-square"
 visible={true}

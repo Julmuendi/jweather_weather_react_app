@@ -18,7 +18,7 @@ export default function WeatherInfor({weather}){
                         <img
                         src={weather.iconurl}
                         alt={weather.description}
-                        className="float-left"
+                        className="float-left spinning"
                          />
                         <span className="temperature">{Math.round(weather.temperature)}</span>
                         <span className="unit">°C|F</span>
