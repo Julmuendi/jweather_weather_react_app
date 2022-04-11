@@ -39,7 +39,7 @@ margin: 20px 0 0 0;
     width: 64px;
     margin-bottom: 45px;
     animation-name: weather-icon;
-    animation-delay: 200ms;
+    animation-delay: 1000ms;
     z-index: 20;
 }
 @keyframes weather-icon{
@@ -47,7 +47,7 @@ margin: 20px 0 0 0;
         transform:rotate(0deg)
     }
     to{
-        transform: rotate(360deg);
+        transform: rotateY(180deg);
     }
 }
 .spinning{
