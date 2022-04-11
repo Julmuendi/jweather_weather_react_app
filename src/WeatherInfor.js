@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 
 export default function WeatherInfor({weather}){
@@ -20,8 +21,8 @@ export default function WeatherInfor({weather}){
                         alt={weather.description}
                         className="float-left spinning"
                          />
-                        <span className="temperature">{Math.round(weather.temperature)}</span>
-                        <span className="unit">°C|F</span>
+                         <WeatherTemperature temperature={weather.temperature} />
+
                     
                     </div>
                 </div>
