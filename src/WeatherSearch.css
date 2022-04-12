@@ -25,6 +25,7 @@ line-height: 29px;
 margin: 20px 0 0 0;
 
 }
+
 .weather .temperature{
     font-weight: bold;
     color:#fff;
@@ -68,11 +69,12 @@ margin: 20px 0 0 0;
     text-decoration: none;
 }
 @media(max-width:760px){
+
     .weather .temperature{
         font-weight: bold;
         color: #fff;
-        font-size: 42px;
-        font-weight: 400;
+        font-size: 28px;
+        font-weight: 250;
     } 
     .weather .unit{
         color: #fff;
