@@ -1,6 +1,9 @@
 import { useState} from "react"
 import "./Forecast.css"
 import { WiDayShowers } from "weather-icons-react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faAngleDown} from '@fortawesome/free-solid-svg-icons'
+import {faAngleUp} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -22,7 +25,7 @@ export default function Forecast(){
                     <div>Day</div>
                     <div>21°/18°</div>
                     <div><WiDayShowers /></div>
-                    <div>icon</div>
+                    <div className="arrow"><FontAwesomeIcon icon={faAngleDown} /></div>
                 </div>
             </div>
                 
@@ -35,7 +38,7 @@ export default function Forecast(){
             <div>Day</div>
             <div>21°/18°</div>
             <div><WiDayShowers /></div>
-            <div>icon</div>
+            <div className="arrow"><FontAwesomeIcon icon={faAngleUp} /></div>
         </div>
         <div className="moreForecast">
             <div className="row">
