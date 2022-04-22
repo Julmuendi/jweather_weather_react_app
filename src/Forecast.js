@@ -37,19 +37,29 @@ export default function Forecast(){
             <div><WiDayShowers /></div>
             <div>icon</div>
         </div>
-        <div className="MoreForecast">
+        <div className="moreForecast">
             <div className="row">
-                <div className="col-sm-6">
+                <div className="col-sm-6 forecastContent">
                     <div>Day</div>
                     <div><WiDayShowers /></div>
                     <div>Temp</div>
                     <div>Feels Like</div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6 secondaryForecast">
+                    <div className="row">
+                    <div className="col-6">
                     <div>Humidity</div>
                     <div>Wind</div>
                     <div>UV index</div>
                     <div>Sunrise</div>
+                    </div>
+                    <div className="col-6">
+                    <div>Min Temp</div>
+                    <div>Wind direction</div>
+                    <div>Pressure</div>
+                    <div>Sunset</div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,15 +1,28 @@
-.WeatherForecast{
-    padding: 10px 15px;
-    margin-top: 15px;
-    border-radius: 10px;
-    
-
-}
 .weatherhighlights{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: red;
-    border: 2px solid red;
+    background-color: #00bbf0;
+    color: black;
+    border: 2px solid #fdb44b;
     cursor: pointer;
+    height: 2rem;
+    width: 100%;
+    border-radius: 4px;
+    z-index: 50;
+
+}
+.moreForecast{
+    background-color: #F0F0F0;
+    color: blueviolet;
+    border-radius: 4px;
+    border: 2px solid #fdb44b;
+
+}
+.forecastContent{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
