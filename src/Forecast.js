@@ -4,11 +4,24 @@ import { WiDayShowers } from "weather-icons-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons'
 import {faAngleUp} from '@fortawesome/free-solid-svg-icons'
+import axios from "axios"
 
 
 
-export default function Forecast(){
+export default function Forecast({cordinates}){
     const[show, setShow]=useState(true)
+
+    function showForecast(response){
+        console.log(response.data)
+    }
+
+        const lon=cordinates.lon;
+        const lat=cordinates.lat;
+        const key="ce735fca9b371504301605240e8fbfe8";
+        const url=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+        
+        axios.get(url).then(showForecast)
+
 
     function showMore(event){
         event.preventDefault()
