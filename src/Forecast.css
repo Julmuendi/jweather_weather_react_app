@@ -5,3 +5,11 @@
     
 
 }
+.weatherhighlights{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: red;
+    border: 2px solid red;
+    cursor: pointer;
+}

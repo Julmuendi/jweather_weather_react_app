@@ -3,6 +3,7 @@ import "./WeatherSearch.css"
 import axios from 'axios'
 import { RotatingSquare } from "react-loader-spinner";
 import WeatherInfor from "./WeatherInfor";
+import Forecast from "./Forecast";
 
 
 export default function WeatherSearch(){
@@ -62,6 +63,7 @@ if(ready){
                 </div>
             </form>
             <WeatherInfor weather={weather}/>
+            <Forecast />
 
         </div>
     )
