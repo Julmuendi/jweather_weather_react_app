@@ -22,6 +22,9 @@
     line-height: 2rem;
 
 }
+.active{
+    display: none;
+}
 .forecastContent{
     display:flex;
     flex-direction: column;
