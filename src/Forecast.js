@@ -29,7 +29,7 @@ export default function Forecast({cordinates}){
 
 
  if(loaded){
-     console.log(forecast)
+   
         return(
         
             <WeatherForecastDay data={forecast[0]}/>
