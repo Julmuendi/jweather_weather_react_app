@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./WeatherSearch.css"
 import axios from 'axios'
 import { RotatingSquare } from "react-loader-spinner";
@@ -11,6 +11,8 @@ export default function WeatherSearch(){
     const[ready,setReady]=useState(false)
     const[weather,setWeather]=useState({})
 
+
+  
 function displayWeather(response){
     
     
