@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { WiDayShowers } from "weather-icons-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons'
 import {faAngleUp} from '@fortawesome/free-solid-svg-icons'
@@ -79,7 +78,7 @@ export default function WeatherForecastDay(props){
         let currentdate=date.getDate()
         let currentyear=date.getFullYear()
 
-        return `${currentmonth} ${currentdate}, ${currentyear}`
+        return `${theday} ${currentmonth} ${currentdate}, ${currentyear}`
 
         
 
