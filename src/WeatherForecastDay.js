@@ -90,12 +90,12 @@ export default function WeatherForecastDay(props){
 
     return(
         <>
-        <div className="WeatherForecast">
+    
         <div typeof="button" onClick={()=>setShow(!show)} className="weatherhighlights">
             <div>{formatDay()}</div>
             <div><span className="maxtempforecast">{maxTemp()}</span></div>
             <div><ForecastIcon code={props.data.weather[0].icon}/></div>
-            <FontAwesomeIcon icon={show? faAngleDown: faAngleUp} className="arrow" />
+            <FontAwesomeIcon icon={show? faAngleUp : faAngleDown} className="arrow" />
         </div>
         <div className={show? "moreForecast" : "active"}>
             <div className="row">
@@ -121,7 +121,7 @@ export default function WeatherForecastDay(props){
                 </div>
             </div>
         </div>
-        </div>
+    
         </>
     )
     

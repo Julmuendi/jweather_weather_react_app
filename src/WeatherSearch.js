@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./WeatherSearch.css"
 import axios from 'axios'
 import { RotatingSquare } from "react-loader-spinner";
@@ -12,9 +12,9 @@ export default function WeatherSearch(){
     const[weather,setWeather]=useState({})
 
 
-  
+
+
 function displayWeather(response){
-    
     
     setWeather(
         {
@@ -35,7 +35,7 @@ function displayWeather(response){
 }
 
 function Search(city){
-    const key="5f472b7acba333cd8a035ea85a0d4d4c";
+    const key="ce735fca9b371504301605240e8fbfe8";
     const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
     axios.get(url).then(displayWeather)

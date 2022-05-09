@@ -8,7 +8,7 @@ import axios from "axios"
 
 
 
-export default function Forecast({cordinates}){
+export default function Forecast(props){
    
     const[forecast, setForecast]=useState(null)
     const[loaded, setLoaded]=useState(false)
@@ -17,12 +17,11 @@ export default function Forecast({cordinates}){
   
   useEffect(()=>{
       setLoaded(false);
-  },[cordinates]);
+  },[props.cordinates]);
    
 
  
     function showForecast(response){
-       
         setForecast(response.data.daily)
         setLoaded(true)
          
@@ -31,7 +30,7 @@ export default function Forecast({cordinates}){
 
 
  if(loaded){
-   console.log(forecast)
+   
         return(
         <div className="WeatherForecast">
             {forecast.map((dailyForecast,index)=>{
@@ -43,11 +42,11 @@ export default function Forecast({cordinates}){
         )
     } else{
             
-     const lon=cordinates.lon;
-     const lat=cordinates.lat;
-     const key="5f472b7acba333cd8a035ea85a0d4d4c";
+     const lon=props.cordinates.lon;
+     const lat=props.cordinates.lat;
+     const key="ce735fca9b371504301605240e8fbfe8";
      const url=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
-    console.log(url)
+    
      axios.get(url).then(showForecast)
 
     return null;
